@@ -187,7 +187,7 @@ void lcdDispOn(void)                                 // Turns on the display
   lcdCmd(LCD_DISP_CON | _dispCon);
 }
 
-void lcdDispOff(void)                                // Turns on the display. Display data remains in DDRAM, and can be displayed instantly by turning it on
+void lcdDispOff(void)                                // Turns off the display. Display data remains in DDRAM, and can be displayed instantly by turning it on
 {
   _dispCon &= ~LCD_DISP_ON;                          // D = 0 (See Hitachi HD44780U data sheet p. 26)
   lcdCmd(LCD_DISP_CON | _dispCon);
